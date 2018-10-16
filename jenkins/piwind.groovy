@@ -138,6 +138,7 @@ node {
         //Store logs
         dir(build_workspace) {
             archiveArtifacts artifacts: 'stage/log/**/*.*', excludes: '*stage/log/**/*.gitkeep'
+            archiveArtifacts artifacts: 'stage/output/*.json'
             if(params.CHECK_ANALYSIS){
                 archiveArtifacts artifacts: "stage/output/${model_test_case}/*.*"
             }    
